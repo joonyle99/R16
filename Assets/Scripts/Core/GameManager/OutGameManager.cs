@@ -13,6 +13,7 @@ public class OutGameManager : MonoBehaviour
     private CameraController _cameraController;
     private OutGameUIController _outGameUIController;
     private PlayerBehaviour _player;
+    private ParallaxBackground _parallax;
 
     [SerializeField] private Transform _cameraPointStore;
     [SerializeField] private Transform _cameraPointLobby;
@@ -58,6 +59,7 @@ public class OutGameManager : MonoBehaviour
         var deltaTime = Time.deltaTime;
         _pointerInput?.Tick(deltaTime);
         _player?.Tick(deltaTime);
+        _parallax?.Tick(deltaTime);
         CheckRoomBoundary();
         if (_inStoreRoom) TrackPlayerXInStore();
         if (_inPracticeRoom) TrackFloorYInPractice();
@@ -78,11 +80,13 @@ public class OutGameManager : MonoBehaviour
         _cameraController = FindFirstObjectByType<CameraController>();
         _outGameUIController = FindFirstObjectByType<OutGameUIController>();
         _player = FindFirstObjectByType<PlayerBehaviour>();
+        _parallax = FindFirstObjectByType<ParallaxBackground>();
         _cameraController.Initialize(CameraMode.OutGame);
         _pointerInput = new PointerInput(_cameraController.MainCamera);
         _outGameUIController.Initialize();
         _player.Initialize(_cameraController, _pointerInput, null, null, null, null);
         // _player.OnLanded += CheckRoomBoundary;
+        _parallax.Initialize(_cameraController.MainCamera.transform, _player.transform);
         _irisMaskTransition.Initialize(_player.transform);
         _gameStartButton.Initialize(() =>
         {
