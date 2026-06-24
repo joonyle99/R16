@@ -123,7 +123,7 @@ public class SlingBehaviour : MonoBehaviour
             return;
         }
 
-        var aimColor = slingResult.HitEnemy ? _targetColor : _defaultColor;
+        var aimColor = slingResult.HitEnemy || slingResult.HitInteractableButton ? _targetColor : _defaultColor;
 
         // 바운스 지점을 기준으로 Points를 구간별로 나눠 별도 LineRenderer에 할당
         // → 구간 간 miter join이 생기지 않아 꺾임 부분 텍스처 왜곡이 사라짐

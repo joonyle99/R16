@@ -10,6 +10,7 @@ public struct SlingResult
     public float TotalDistance;
     public List<Collider2D> HitEnemies;
     public bool HitEnemy => HitEnemies != null && HitEnemies.Count > 0;
+    public bool HitInteractableButton; // 궤적이 InteractableButton에 닿는지 (조준선 강조용)
 }
 
 public class TrajectorySolver
@@ -32,20 +33,25 @@ public class TrajectorySolver
         var points = new List<Vector2> { origin };
         var bouncePoints = new List<Vector2>();
         var hitEnemySet = new HashSet<Collider2D>();
+        var hitInteractableButton = false;
         var simulation = SlingState.Create(origin, dir, _config, fromGround, comboRush);
 
         while (simulation.Remaining > 0f)
         {
-            var evt = SlingSimulator.Tick(ref simulation, _config, _groundLayer, _platformLayer, _enemyLayer, Time.fixedDeltaTime, out Collider2D hitCollider);
+            var evt = SlingSimulator.Tick(ref simulation, _config, _groundLayer, _platformLayer, _enemyLayer, Time.fixedDeltaTime, out Collider2D hitEnemyCollider, out Collider2D hitSolidCollider);
             points.Add(simulation.Position);
+
+            // 벽킥으로 break하기 전에 먼저 판별 (버튼을 벽으로 맞고 멈춰도 강조되도록)
+            if (hitSolidCollider != null && hitSolidCollider.GetComponent<InteractableButton>() != null)
+                hitInteractableButton = true;
 
             if (evt == SlingEvent.Wall)
             {
                 if (fromGround || comboRush) break;
                 bouncePoints.Add(simulation.Position);
             }
-            else if (evt == SlingEvent.Enemy && hitCollider != null && !fromGround)
-                hitEnemySet.Add(hitCollider);
+            else if (evt == SlingEvent.Enemy && hitEnemyCollider != null && !fromGround)
+                hitEnemySet.Add(hitEnemyCollider);
         }
 
         return new SlingResult
@@ -55,6 +61,7 @@ public class TrajectorySolver
             BounceCount = bouncePoints.Count,
             TotalDistance = simulation.Total,
             HitEnemies = new List<Collider2D>(hitEnemySet),
+            HitInteractableButton = hitInteractableButton,
         };
     }
 }

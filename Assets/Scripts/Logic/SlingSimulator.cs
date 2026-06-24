@@ -32,9 +32,10 @@ public struct SlingState
 
 public static class SlingSimulator
 {
-    public static SlingEvent Tick(ref SlingState state, SlingConfig config, LayerMask groundLayer, LayerMask platformLayer, LayerMask enemyLayer, float deltaTime, out Collider2D hitEnemyCollider)
+    public static SlingEvent Tick(ref SlingState state, SlingConfig config, LayerMask groundLayer, LayerMask platformLayer, LayerMask enemyLayer, float deltaTime, out Collider2D hitEnemyCollider, out Collider2D hitSolidCollider)
     {
         hitEnemyCollider = null;
+        hitSolidCollider = null;
 
         state.Velocity.y -= config.slingGravity * deltaTime;
         state.Remaining -= deltaTime;
@@ -81,6 +82,7 @@ public static class SlingSimulator
             // groundLayer: 옆면 벽 킥, 윗면 / 아랫면 차단
             state.Total += hit.distance;
             state.Position = hit.centroid;
+            hitSolidCollider = hit.collider; // 궤적이 닿은 솔리드(버튼 등 조준 대상 판별용)
 
             if (!IsWall(hit.normal, config))
             {
