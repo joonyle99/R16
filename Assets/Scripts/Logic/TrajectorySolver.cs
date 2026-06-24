@@ -42,7 +42,8 @@ public class TrajectorySolver
             points.Add(simulation.Position);
 
             // 벽킥으로 break하기 전에 먼저 판별 (버튼을 벽으로 맞고 멈춰도 강조되도록)
-            if (hitSolidCollider != null && hitSolidCollider.GetComponent<InteractableButton>() != null)
+            // 적 락온과 동일하게 공중 조준(!fromGround)일 때만 강조한다
+            if (!fromGround && hitSolidCollider != null && hitSolidCollider.GetComponent<InteractableButton>() != null)
                 hitInteractableButton = true;
 
             if (evt == SlingEvent.Wall)
