@@ -27,12 +27,11 @@ MonoBehaviour:
   aimSlowFadeDuration: 1.5
   noChargePauseDuration: 0.5
   circleCastRadius: 0.37
-  minDistance: 2
+  minDistance: 0.5
   maxBounces: 2
   bonusKickCount: 0
   wallRepelSpeed: 2
   baseCharges: 3
-  minArrowDistance: 1.5
   comboRushDuration: 5
   comboRushThreshold: 15
   comboRushMissionChain: 3

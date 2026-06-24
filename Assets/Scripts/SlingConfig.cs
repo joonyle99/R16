@@ -27,12 +27,11 @@ public class SlingConfig : ScriptableObject
     [Tooltip("정상 속도 복귀 페이드 시간 (리얼타임 초)")] public float aimSlowFadeDuration = 1.0f;
     [Tooltip("차지 없을 때 피드백용 타임스케일 정지 시간(초)")] public float noChargePauseDuration = 0.3f;
     [Tooltip("궤적 예측/충돌 판정에 쓰는 서클캐스트 반지름")] public float circleCastRadius = 0.4f;
-    [Tooltip("벽 킥(예산 바운스)이 허용되기까지 이동해야 하는 최소 누적 거리")] public float minDistance = 2f;
+    [Tooltip("벽 킥(예산 바운스) 허용에 필요한 최소 누적 거리 — 겸 궤적 총거리가 이 값 미만이면 조준선 숨김")] public float minDistance = 2f;
     [Tooltip("예산 바운스 최대 횟수 (궤적 세그먼트 수와도 연동)")] public int maxBounces = 4;
     [Tooltip("예산 소진 후에도 벽에 닿으면 주어지는 추가 킥 횟수 (조준선엔 미표시)")] public int bonusKickCount = 1;
     [Tooltip("킥 불가 상태로 벽에 닿았을 때 밀려나는 속도 (벽 타고 떨어지는 그림 방지)")] public float wallRepelSpeed = 5f;
     [Tooltip("시작 차지 — 지상 발사도 차지를 소모하므로 기본 1개 보장")] public int baseCharges = 1;
-    [Tooltip("궤적 총 거리가 이 값 미만이면 끝 화살표 숨김")] public float minArrowDistance = 1.5f;
     [Tooltip("콤보 러쉬 모드 지속 시간(초)")] public float comboRushDuration = 10f;
     [Tooltip("콤보 러쉬 발동 임계값 (이 콤보 수 이상이면 러쉬 발동)")] public int comboRushThreshold = 15;
     [Tooltip("연속 미션 클리어 N회 시 콤보 러쉬 발동")] public int comboRushMissionChain = 3;

@@ -117,7 +117,7 @@ public class SlingBehaviour : MonoBehaviour
 
         var slingResult = _solver.Solve(origin, slingDir, fromGround, comboRush);
 
-        if (slingResult.TotalDistance < _config.minArrowDistance)
+        if (slingResult.TotalDistance < _config.minDistance)
         {
             HideTrajectory();
             return;
