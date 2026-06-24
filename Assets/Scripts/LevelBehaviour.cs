@@ -46,6 +46,7 @@ public class LevelBehaviour : MonoBehaviour
                 _player.OnLanded -= _missionSystem.ResetProgress;
             }
             if (_player != null) _missionSystem.OnChainThresholdReached -= _player.ActivateComboRush;
+            _missionSystem.OnMissionStarted -= RefreshMissionHighlights;
             _missionSystem.OnMissionComplete -= OnMissionComplete;
             _missionSystem.OnMissionFailed -= OnMissionFailed;
         }
@@ -73,6 +74,7 @@ public class LevelBehaviour : MonoBehaviour
 
         _missionSystem.OnMissionFailed += OnMissionFailed;
         _missionSystem.OnMissionComplete += OnMissionComplete;
+        _missionSystem.OnMissionStarted += RefreshMissionHighlights;
         _missionSystem.OnChainThresholdReached += _player.ActivateComboRush;
         _player.OnLanded += _missionSystem.ResetProgress;
         _player.OnKilled += _missionSystem.RecordKill;
@@ -190,6 +192,18 @@ public class LevelBehaviour : MonoBehaviour
     }
 
     // ========== 미션 진행 ==========
+
+    // 미션이 바뀔 때마다 살아있는 적들의 강조 외곽선을 갱신한다. 대상 타입만 켜고 나머지는 끈다.
+    private void RefreshMissionHighlights(MissionDefinition mission)
+    {
+        if (_enemies == null || mission == null) return;
+
+        foreach (var enemy in _enemies)
+        {
+            if (enemy == null || enemy.IsDead) continue;
+            enemy.SetMissionHighlight(mission.Requirements.ContainsKey(enemy.EnemyType));
+        }
+    }
 
     private void OnMissionFailed()
     {
