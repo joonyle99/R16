@@ -104,13 +104,13 @@ MonoBehaviour:
   - type: 1
     clip: {fileID: 8300000, guid: 7b6f74b63ebb10e4a82f134ed90ccd9c, type: 3}
   - type: 2
-    clip: {fileID: 8300000, guid: cce9a1761d047884cbb7140c77954d03, type: 3}
+    clip: {fileID: 8300000, guid: 3e28dde5d987cf74ab216bb0432e4abe, type: 3}
   - type: 3
     clip: {fileID: 8300000, guid: 843c0b44d8135d747a52b2d74e631ef3, type: 3}
   - type: 4
     clip: {fileID: 8300000, guid: 2ee5616b002a3974ca918c102de63e6f, type: 3}
   - type: 5
-    clip: {fileID: 8300000, guid: 51dadcf686dbdb64e8ee9d6dfb5ed9fc, type: 3}
+    clip: {fileID: 8300000, guid: 0406d98c55ed2524c9765786db78e080, type: 3}
   _bgmSource: {fileID: 7078179868914919910}
   _sfxSource: {fileID: 3617940627469263463}
   _bgmFadeDuration: 0.35
