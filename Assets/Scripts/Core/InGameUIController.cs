@@ -41,7 +41,7 @@ public class InGameUIController : MonoBehaviour, IGameStateListener<InGameState>
     public void OnStateChanged(InGameState prevState, InGameState currState)
     {
         // TouchBlockPanel.SetVisible(currState == InGameState.Wait);
-        WaitPanel.SetVisible(currState == InGameState.Wait);
+        // WaitPanel.SetVisible(currState == InGameState.Wait);
     }
 
     public void ShowResultPanel(GameResultData data)

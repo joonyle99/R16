@@ -102,8 +102,10 @@ public class InGameManager : MonoBehaviour
             OnFailure,
             OnSuccess);
         _missionSystem = _levelManager.MissionSystem;
-        if (_levelManager?.Player != null) _irisMaskTransition.Initialize(_levelManager.Player.transform);
-        _irisMaskTransition.TransitionIn(null); // OutGame에서 닫힌 채로 진입 → 화면 열기
+        // 인게임 이리스 마스크는 카메라의 자식으로 두어 카메라와 함께 움직인다.
+        // focus를 비워(null) world-follow(LateUpdate)를 끄지 않으면 매 프레임 플레이어 위치로 끌려가 부모 추적이 무효화된다.
+        // _irisMaskTransition.Initialize(null);
+        // _irisMaskTransition.TransitionIn(null); // OutGame에서 닫힌 채로 진입 → 화면 열기
 
         if (SoundManager.Instance != null) _inGameStateController.OnStateChanged += SoundManager.Instance.OnStateChanged;
         _inGameStateController.OnStateChanged += _inGameUIController.OnStateChanged;
@@ -133,7 +135,7 @@ public class InGameManager : MonoBehaviour
     private void OnFirstPress(Vector2 _)
     {
         _pointerInput.OnPress -= OnFirstPress;
-        _inGameUIController.WaitPanel.SetVisible(false);
+        // _inGameUIController.WaitPanel.SetVisible(false);
         // _inGameUIController.TouchBlockPanel.SetVisible(false);
         // if (_levelManager?.Player != null) _levelManager.Player.IsInputEnabled = true;
     }

@@ -26,6 +26,7 @@ public class PursuerActor : MonoBehaviour
     [SerializeField] private float _moveDuration = 0.4f;
     [SerializeField] private Ease _easeDown = Ease.OutBack;
     [SerializeField] private Ease _easeUp = Ease.InOutQuad;
+    [SerializeField] private float _hiddenViewportY = -0.6f; // 화면 아래로 완전히 숨는 뷰포트 위치 (인트로 등)
 
     public Animator Animator { get; private set; }
 
@@ -112,6 +113,25 @@ public class PursuerActor : MonoBehaviour
 
         if (toTier > fromTier) ChangeState<PursuerClimbState>();
         else if (toTier < fromTier) ChangeState<PursuerHitState>();
+    }
+
+    // 즉시 화면 밖(아래)으로 내려 숨긴다. 카메라 뷰포트 기준이라 카메라가 어디를 보든 보이지 않는다.
+    public void HideBelowScreen()
+    {
+        _tween?.Kill();
+        _currViewportY = _hiddenViewportY;
+    }
+
+    // 현재 티어 위치로 부드럽게 올라온다 (인트로 종료 후 "밑에서 등장" 연출).
+    public void RiseToTier(float duration)
+    {
+        _tween?.Kill();
+        _tween = DOTween.To(
+            () => _currViewportY,
+            y => _currViewportY = y,
+            ViewportYForTier(_currTier),
+            duration
+        ).SetEase(_easeUp);
     }
 
     public void TransitionToTierState()

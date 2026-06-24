@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using DG.Tweening;
 
@@ -149,6 +150,34 @@ public class CameraController : MonoBehaviour
             .SetUpdate(true)
             .SetEase(ease)
             .SetLink(gameObject);
+    }
+
+    // ======== 인게임 인트로 ========
+
+    // 레벨 시작 연출: 카메라를 목표(topY)로 올려 잠깐 보여준 뒤, 플레이어(followTarget)까지 쭉 내려오고 추종을 재개한다.
+    // 연출 동안엔 추종을 꺼(_followTarget = null) LateTick이 카메라를 건드리지 못하게 하고, 트윈이 단독으로 움직인다.
+    public Tween PlayIntro(Transform followTarget, float topY, float holdDuration, float panDuration, Ease ease = Ease.InOutCubic, Action onComplete = null)
+    {
+        DeactivateFollow();
+
+        // 내려와서 멈출 지점 = 평소 추종이 정착할 위치. 여기로 끝나야 추종 재개 시 끊김이 없다.
+        var bottomY = followTarget.position.y + _verticalOffset;
+
+        // 목표 지점으로 즉시 올린다 (같은 프레임 안에 처리되므로 점프로 보이지 않음)
+        var pos = transform.position;
+        pos.x = _fixedX;
+        pos.y = topY;
+        transform.position = pos;
+
+        return DOTween.Sequence().SetUpdate(true).SetLink(gameObject)
+            .AppendInterval(holdDuration)                                       // 목표를 보여주는 정지 시간
+            .Append(transform.DOMoveY(bottomY, panDuration).SetEase(ease))      // 플레이어로 하강
+            .OnComplete(() =>
+            {
+                _followY = transform.position.y; // 베이스 Y 동기화
+                ActivateFollow(followTarget);    // 추종 재개
+                onComplete?.Invoke();
+            });
     }
 
     // ======== 아웃게임 카메라 ========

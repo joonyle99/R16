@@ -10,6 +10,11 @@ public class LevelBehaviour : MonoBehaviour
     [SerializeField] private Transform _endPoint;
     [SerializeField] private Transform[] _cameraFloorPoints; // 역주행 방지: 플레이어가 지날 때마다 카메라 하한선이 되는 라인들
 
+    [Header("인트로 연출")]
+    [SerializeField] private float _introHoldDuration = 0.8f; // 목표를 보여주며 멈춰 있는 시간
+    [SerializeField] private float _introPanDuration = 1.6f;   // 목표에서 플레이어까지 내려오는 시간
+    [SerializeField] private float _introPursuerRiseDuration = 0.5f; // 인트로 종료 후 추격자가 밑에서 올라오는 시간
+
     private PlayerBehaviour _player;
     public PlayerBehaviour Player => _player;
     private PursuerActor _pursuerActor;
@@ -87,7 +92,16 @@ public class LevelBehaviour : MonoBehaviour
 
         _isPlayerReached = false;
 
-        InitCameraFloorPoints();
+        // InitCameraFloorPoints();
+
+        // 레벨 시작 연출: 목표(endPoint)를 보여준 뒤 플레이어로 카메라가 내려온다.
+        // 연출 동안 추격자는 화면 밖(아래)으로 숨겨 두고, 끝나면 밑에서 스윽 올라오게 한다.
+        if (_cameraController != null && _player != null && _endPoint != null)
+        {
+            _pursuerActor?.HideBelowScreen();
+            _cameraController.PlayIntro(_player.transform, _endPoint.position.y, _introHoldDuration, _introPanDuration,
+                onComplete: () => _pursuerActor?.RiseToTier(_introPursuerRiseDuration));
+        }
     }
 
     public void FixedTick(float fixedDeltaTime)
@@ -103,8 +117,8 @@ public class LevelBehaviour : MonoBehaviour
         _pursuerActor?.Tick(deltaTime);
         _parallax?.Tick(deltaTime);
 
-        UpdateCameraFloor();
-        CheckFallOffDeath();
+        // UpdateCameraFloor();
+        // CheckFallOffDeath();
 
         // 플레이 시작(첫 슬링샷으로 Wait 해제) 시점에 첫 미션 시작 (이후 추격자는 미션 성공/실패에 반응)
         if (!_missionStarted && !_levelManager.IsWaiting)
@@ -283,6 +297,10 @@ public class LevelBehaviour : MonoBehaviour
         else if (kb.digit2Key.wasPressedThisFrame) _pursuerState.CheatSetTier(2);
         else if (kb.digit3Key.wasPressedThisFrame) _pursuerState.CheatSetTier(3);
         else if (kb.digit4Key.wasPressedThisFrame) _pursuerState.CheatSetTier(4);
+        else if (kb.digit5Key.wasPressedThisFrame)
+        {
+            
+        }
     }
 #endif
 }
