@@ -647,6 +647,7 @@ public sealed class PlayerBehaviour : SlingEntity
             CancelAimSlow(); // 에임 슬로우 코루틴이 정지 연출의 timeScale을 덮어쓰지 않도록 끊는다
             Time.timeScale = 0f;
             _playerStatusVfx.HideAll(); // 러쉬 진입 — 추진/에너지/스턴만 초기화하고 러쉬 전용 이펙트는 유지(토글 경합 방지)
+            Rigid.linearVelocity = Vector2.zero; // 발동 직전 하강 관성 제거 → 깔끔한 정지
             CameraController.ZoomScale(_comboRushZoomScale, _comboRushZoomInDuration);
         }
 
@@ -682,7 +683,6 @@ public sealed class PlayerBehaviour : SlingEntity
         yield return new WaitForSecondsRealtime(_comboRushPost2EffectDelay);
 
         {
-            Rigid.linearVelocity = Vector2.zero; // 발동 직전 하강 관성 제거 → 깔끔한 정지
             Time.timeScale = _isAimSlowing ? _effectiveTimeScale : 1f;
         }
     }
