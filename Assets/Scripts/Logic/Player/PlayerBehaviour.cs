@@ -633,12 +633,6 @@ public sealed class PlayerBehaviour : SlingEntity
 
     private IEnumerator ComboRushIntroRoutine()
     {
-        {
-            
-        }
-        
-        yield return new WaitForSecondsRealtime(_comboRushPre2EffectDelay);
-        
         // 1. pre delay 전
         {
             _isComboRushIntro = true;
@@ -646,9 +640,10 @@ public sealed class PlayerBehaviour : SlingEntity
             if (_isAiming) EndAim(); // 연출 진입 시 진행 중이던 조준은 취소
             CancelAimSlow(); // 에임 슬로우 코루틴이 정지 연출의 timeScale을 덮어쓰지 않도록 끊는다
             Time.timeScale = 0f;
+            Rigid.linearVelocity = Vector2.zero;
             _playerStatusVfx.HideAll(); // 러쉬 진입 — 추진/에너지/스턴만 초기화하고 러쉬 전용 이펙트는 유지(토글 경합 방지)
-            Rigid.linearVelocity = Vector2.zero; // 발동 직전 하강 관성 제거 → 깔끔한 정지
             CameraController.ZoomScale(_comboRushZoomScale, _comboRushZoomInDuration);
+            CameraController.CenterVerticalOnTarget(transform, _comboRushZoomInDuration); // 줌인 중 플레이어를 화면 세로 정중앙으로
         }
 
         yield return new WaitForSecondsRealtime(_comboRushPreEffectDelay);
@@ -675,7 +670,7 @@ public sealed class PlayerBehaviour : SlingEntity
             // TODO: 여기서 이펙트 터트리기 (분리 요청해서)
             _playerDisplay.RefreshDisplay(); // 러쉬 진입 — 차지 오브 숨김
             // _playerDisplay.ShowComboRushEffect();
-            _comboRushHoverTimer = _comboRushHoverDuration; // 잠시 공중에 멈춰 조준할 여유를 준다
+            // _comboRushHoverTimer = _comboRushHoverDuration; // 잠시 공중에 멈춰 조준할 여유를 준다
             CameraController.ResetZoom(_comboRushZoomOutDuration);
             _isComboRushIntro = false;
         }
@@ -683,6 +678,7 @@ public sealed class PlayerBehaviour : SlingEntity
         yield return new WaitForSecondsRealtime(_comboRushPost2EffectDelay);
 
         {
+            Rigid.linearVelocity = Vector2.up * SlingBehaviour.Config.comboRushSlingSpeed;
             Time.timeScale = _isAimSlowing ? _effectiveTimeScale : 1f;
         }
     }

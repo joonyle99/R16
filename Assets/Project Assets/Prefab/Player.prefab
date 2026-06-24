@@ -15557,9 +15557,9 @@ MonoBehaviour:
   _comboRushPreEffectDelay: 0.7
   _comboRushPre2EffectDelay: 0
   _comboRushPostEffectDelay: 1
-  _comboRushPost2EffectDelay: 0.7
+  _comboRushPost2EffectDelay: 0.8
   _comboRushFreezeDuration: 1.7
-  _comboRushZoomScale: 0.6
+  _comboRushZoomScale: 0.8
   _comboRushZoomInDuration: 0.5
   _comboRushZoomOutDuration: 1
   _comboRushConstantShake: 0.2

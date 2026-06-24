@@ -35,6 +35,7 @@ public class CameraController : MonoBehaviour
     private Transform _followTarget;
     private Tween _zoomTween;
     private Tween _offsetTween;
+    private Tween _followYTween;
     private float _minY = float.NegativeInfinity; // 카메라가 이 월드 Y 아래로 내려가지 못하도록 막는 하한선 (역주행 방지)
 
     // =========== ... ===========
@@ -133,6 +134,21 @@ public class CameraController : MonoBehaviour
     public void ResetZoom(float duration, Ease ease = Ease.OutQuad)
     {
         ZoomScale(1f, duration, ease);
+    }
+
+    // 콤보 러쉬 줌인 등에서 플레이어를 화면 세로 정중앙에 맞춘다.
+    // 가로(X)는 LateTick의 pan 로직이 줌인 배율에 맞춰 자동으로 플레이어를 향해 좁혀가며 (벽 안에서) 중앙에 맞춘다.
+    // 세로(Y)는 정지(timeScale=0) 중 LateTick의 lerp가 멈춰(_followY 고정) 갱신되지 않으므로,
+    // 줌인과 동일한 시간 동안 unscaled 트윈으로 베이스 Y를 플레이어 Y(오프셋 0 = 정중앙)까지 직접 내린다.
+    // 연출 종료 후 timeScale이 복귀하면 LateTick이 _verticalOffset 기준 기본 구도로 자연스럽게 되돌린다.
+    public void CenterVerticalOnTarget(Transform target, float duration, Ease ease = Ease.OutQuad)
+    {
+        if (target == null) return;
+        _followYTween?.Kill();
+        _followYTween = DOTween.To(() => _followY, v => _followY = v, target.position.y, duration)
+            .SetUpdate(true)
+            .SetEase(ease)
+            .SetLink(gameObject);
     }
 
     // ======== 아웃게임 카메라 ========
