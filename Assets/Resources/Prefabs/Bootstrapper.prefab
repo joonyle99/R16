@@ -95,9 +95,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SoundManager
   _bgmEntries:
   - type: 0
-    clip: {fileID: 8300000, guid: 18d487084f324ee42b26931871aee015, type: 3}
+    clip: {fileID: 8300000, guid: a1de9b234342ac84886dbe64576e483f, type: 3}
   - type: 10
-    clip: {fileID: 8300000, guid: 10b02b6bb2dadab40878330e0887c5a6, type: 3}
+    clip: {fileID: 8300000, guid: 2b7684f0901ba554a82a0574b020fe79, type: 3}
   _sfxEntries:
   - type: 0
     clip: {fileID: 8300000, guid: c1e9eaac979a75c4189a4f2f25dc800f, type: 3}
