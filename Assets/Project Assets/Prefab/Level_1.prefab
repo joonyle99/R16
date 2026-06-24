@@ -1032,6 +1032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee92fd4e24a8c04aaaf7a3137e141e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
+  _axis: 1
   _parallaxFactor: 0
 --- !u!1 &415276617828097355
 GameObject:
@@ -1571,6 +1572,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee92fd4e24a8c04aaaf7a3137e141e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
+  _axis: 1
   _parallaxFactor: 0.5
 --- !u!1 &675136146033834007
 GameObject:
@@ -5849,6 +5851,8 @@ MonoBehaviour:
   - {fileID: 8480351818207373836}
   - {fileID: 4335468823498434223}
   - {fileID: 7883950668690147589}
+  _introHoldDuration: 3
+  _introPanDuration: 5
 --- !u!1 &2659140634323003234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5952,6 +5956,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ee92fd4e24a8c04aaaf7a3137e141e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxLayer
+  _axis: 1
   _parallaxFactor: 0
 --- !u!1 &2699248434534426266
 GameObject:

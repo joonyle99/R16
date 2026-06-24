@@ -4282,6 +4282,7 @@ Transform:
   - {fileID: 519420032}
   - {fileID: 1646680304}
   - {fileID: 1108225505}
+  - {fileID: 1146011968322223840}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &733848064
@@ -4319,6 +4320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraShaker
   _decay: 15
   _frequency: 30
+  _perpRatio: 0.6
   _testMagnitude: 0
   _testDirection: {x: 0, y: 0}
 --- !u!1001 &763544103
@@ -11141,7 +11143,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 733848063}
     m_Modifications:
     - target: {fileID: 453091423277790703, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11153,7 +11155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 453091423277790703, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 453091423277790703, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -11196,6 +11198,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
+--- !u!4 &1146011968322223840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 453091423277790703, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
+  m_PrefabInstance: {fileID: 1146011968322223839}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1454982241177461273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12011,7 +12018,6 @@ SceneRoots:
   - {fileID: 1923341124}
   - {fileID: 1790646932}
   - {fileID: 733848063}
-  - {fileID: 1146011968322223839}
   - {fileID: 546037326}
   - {fileID: 121227141}
   - {fileID: 1926579466}
