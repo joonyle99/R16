@@ -1,0 +1,555 @@
+fileFormatVersion: 2
+guid: f2c9a76967ab70a44aa6f745fe9c729b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5924946224637979920
+    second: mission_result_0
+  - first:
+      213: -2403517069045660998
+    second: mission_result_1
+  - first:
+      213: -1419135359822931657
+    second: mission_result_2
+  - first:
+      213: -5799274542866569565
+    second: mission_result_3
+  - first:
+      213: -4077752447058490360
+    second: mission_result_4
+  - first:
+      213: -727127161058497622
+    second: mission_result_5
+  - first:
+      213: -552352130384329077
+    second: mission_result_6
+  - first:
+      213: 2571877886604800446
+    second: mission_result_7
+  - first:
+      213: 1944605206733880313
+    second: mission_result_8
+  - first:
+      213: -5976927405881663808
+    second: mission_result_9
+  - first:
+      213: 5114748854579027608
+    second: mission_result_10
+  - first:
+      213: -6340941391800480631
+    second: mission_result_11
+  - first:
+      213: 148055189401731235
+    second: mission_result_12
+  - first:
+      213: 2870946680738244270
+    second: mission_result_13
+  - first:
+      213: 7161115024549692465
+    second: mission_result_14
+  - first:
+      213: -1842289886310466893
+    second: mission_result_15
+  - first:
+      213: -7099790648829996752
+    second: mission_result_16
+  - first:
+      213: 2395116579531389814
+    second: mission_result_17
+  - first:
+      213: 2981034411736938741
+    second: mission_result_18
+  - first:
+      213: 8671912049894427531
+    second: mission_result_19
+  - first:
+      213: -1795403128163701081
+    second: mission_result_20
+  - first:
+      213: -5330202937292040301
+    second: mission_result_21
+  - first:
+      213: -1856382782781617161
+    second: mission_result_22
+  - first:
+      213: 3345562507866079644
+    second: mission_result_23
+  - first:
+      213: 990622319061421775
+    second: mission_result_24
+  - first:
+      213: -3020373643454948116
+    second: mission_result_25
+  - first:
+      213: 243231089315055867
+    second: mission_result_26
+  - first:
+      213: 6608305327446463688
+    second: mission_result_27
+  - first:
+      213: 122257501913766981
+    second: mission_result_28
+  - first:
+      213: -1115450576705627028
+    second: mission_result_29
+  - first:
+      213: -2953179758490439788
+    second: mission_result_30
+  - first:
+      213: -6541710343544798925
+    second: mission_result_31
+  - first:
+      213: -6647751770685073859
+    second: mission_result_32
+  - first:
+      213: 8987907607805338953
+    second: mission_result_33
+  - first:
+      213: -2524158776619325977
+    second: mission_result_34
+  - first:
+      213: 2286377171101695426
+    second: mission_result_35
+  - first:
+      213: -8334742859972359605
+    second: mission_result_36
+  - first:
+      213: 7823079936455236475
+    second: mission_result_37
+  - first:
+      213: -929807291224906179
+    second: mission_result_38
+  - first:
+      213: 4721035148907161859
+    second: mission_result_39
+  - first:
+      213: -3859916822422784265
+    second: mission_result_40
+  - first:
+      213: -5173347832177351453
+    second: mission_result_41
+  - first:
+      213: -3273385085612487493
+    second: mission_result_42
+  - first:
+      213: -6357857033434927208
+    second: mission_result_43
+  - first:
+      213: 3119906386937759169
+    second: mission_result_44
+  - first:
+      213: 7758215634250904913
+    second: mission_result_45
+  - first:
+      213: 7035459968643268349
+    second: mission_result_46
+  - first:
+      213: 2339495941286540409
+    second: mission_result_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: mission_result_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 289
+        width: 384
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f25927eccc56cda0800000000000000
+      internalID: -5924946224637979920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_1
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 358
+        width: 305
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab202f7c5fdf4aed0800000000000000
+      internalID: -2403517069045660998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_6
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 358
+        width: 178
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b860385f9a6a558f0800000000000000
+      internalID: -552352130384329077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_17
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 265
+        width: 320
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bfd96d6d92d3120800000000000000
+      internalID: 2395116579531389814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_18
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 257
+        width: 191
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f8bbc6d003ce5920800000000000000
+      internalID: 2981034411736938741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_24
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 73
+        width: 384
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fceca3a20c56fbd00800000000000000
+      internalID: 990622319061421775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_31
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 165
+        width: 299
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 331838d1a1d2735a0800000000000000
+      internalID: -6541710343544798925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_32
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 161
+        width: 218
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3697516cf07eb3a0800000000000000
+      internalID: -6647751770685073859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_42
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 74
+        width: 319
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc81079b999292d0800000000000000
+      internalID: -3273385085612487493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mission_result_43
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 73
+        width: 218
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f6465a6ba54c7a0800000000000000
+      internalID: -6357857033434927208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c09c89f60b8ab5e4c85a6a4cddd9384c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      mission_result_0: -5924946224637979920
+      mission_result_1: -2403517069045660998
+      mission_result_10: 5114748854579027608
+      mission_result_11: -6340941391800480631
+      mission_result_12: 148055189401731235
+      mission_result_13: 2870946680738244270
+      mission_result_14: 7161115024549692465
+      mission_result_15: -1842289886310466893
+      mission_result_16: -7099790648829996752
+      mission_result_17: 2395116579531389814
+      mission_result_18: 2981034411736938741
+      mission_result_19: 8671912049894427531
+      mission_result_2: -1419135359822931657
+      mission_result_20: -1795403128163701081
+      mission_result_21: -5330202937292040301
+      mission_result_22: -1856382782781617161
+      mission_result_23: 3345562507866079644
+      mission_result_24: 990622319061421775
+      mission_result_25: -3020373643454948116
+      mission_result_26: 243231089315055867
+      mission_result_27: 6608305327446463688
+      mission_result_28: 122257501913766981
+      mission_result_29: -1115450576705627028
+      mission_result_3: -5799274542866569565
+      mission_result_30: -2953179758490439788
+      mission_result_31: -6541710343544798925
+      mission_result_32: -6647751770685073859
+      mission_result_33: 8987907607805338953
+      mission_result_34: -2524158776619325977
+      mission_result_35: 2286377171101695426
+      mission_result_36: -8334742859972359605
+      mission_result_37: 7823079936455236475
+      mission_result_38: -929807291224906179
+      mission_result_39: 4721035148907161859
+      mission_result_4: -4077752447058490360
+      mission_result_40: -3859916822422784265
+      mission_result_41: -5173347832177351453
+      mission_result_42: -3273385085612487493
+      mission_result_43: -6357857033434927208
+      mission_result_44: 3119906386937759169
+      mission_result_45: 7758215634250904913
+      mission_result_46: 7035459968643268349
+      mission_result_47: 2339495941286540409
+      mission_result_5: -727127161058497622
+      mission_result_6: -552352130384329077
+      mission_result_7: 2571877886604800446
+      mission_result_8: 1944605206733880313
+      mission_result_9: -5976927405881663808
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
