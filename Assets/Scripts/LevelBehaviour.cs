@@ -16,6 +16,7 @@ public class LevelBehaviour : MonoBehaviour
     private PursuerState _pursuerState;
     public PursuerState PursuerState => _pursuerState;
     private EnemyBehaviour[] _enemies;
+    private ParallaxBackground _parallax;
 
     private MissionSystem _missionSystem;
     public MissionSystem MissionSystem => _missionSystem;
@@ -65,6 +66,8 @@ public class LevelBehaviour : MonoBehaviour
         _enemies = GetComponentsInChildren<EnemyBehaviour>();
         foreach (var enemy in _enemies)
             enemy?.Initialize(_player, null, null);
+        _parallax =GetComponentInChildren<ParallaxBackground>();
+        _parallax.Initialize(cameraController.MainCamera.transform, _player.transform);
 
         _onFailure = onFailure;
         _onSuccess = onSuccess;
@@ -98,6 +101,7 @@ public class LevelBehaviour : MonoBehaviour
     {
         _player?.Tick(deltaTime);
         _pursuerActor?.Tick(deltaTime);
+        _parallax?.Tick(deltaTime);
 
         UpdateCameraFloor();
         CheckFallOffDeath();
