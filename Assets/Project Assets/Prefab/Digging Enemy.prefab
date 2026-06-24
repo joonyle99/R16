@@ -342,6 +342,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2246994646021242691}
     m_Modifications:
+    - target: {fileID: 452015364608242894, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021328662723742541, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3026635635711908759, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3293168630877329493, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -382,9 +394,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3700914895793653614, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3901056541518141683, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4562287940607056411, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7164566228714994647, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
       propertyPath: m_Name
       value: Animator
+      objectReference: {fileID: 0}
+    - target: {fileID: 7164566228714994647, guid: 64627ca09e9a88a4c930ea4cc21ad74a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

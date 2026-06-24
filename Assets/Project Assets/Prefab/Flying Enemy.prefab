@@ -247,6 +247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4ed5be5c9512e643a278906b3d33d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RushLaunchable
+  _launchWith: []
   _horizontalSpeed: 40
   _upwardSpeed: 7
   _gravity: 22
@@ -263,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 219877159469514017, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
       propertyPath: m_Name
       value: Animator
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482045901639255520, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2792224129720234106, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -303,6 +308,26 @@ PrefabInstance:
     - target: {fileID: 2792224129720234106, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893627099086696414, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6855663461524731867, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7763156996479713698, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8673428060497443844, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869147810656952403, guid: e425ca8fa61329c40a453f01c54533be, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

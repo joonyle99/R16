@@ -338,6 +338,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7485640952198054804}
     m_Modifications:
+    - target: {fileID: 324180723371175871, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 388712575414751708, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 883049589035080715, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -378,13 +386,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2428857225089354577, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2756674530687106613, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5778848847067684356, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
       propertyPath: m_Name
       value: Animator
       objectReference: {fileID: 0}
+    - target: {fileID: 6127201148637041089, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6148518762351277030, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7678538927413270260, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8243699225321219170, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8245016450431067539, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8245016450431067539, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8312386773351530628, guid: 8f12837727e429a44ba15cd055c6fe1a, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -185,6 +185,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1049210647418349364, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1760797882919580171, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4357475450422225706, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
       propertyPath: m_Name
       value: Animator
@@ -192,6 +200,22 @@ PrefabInstance:
     - target: {fileID: 4646582598334204209, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
       propertyPath: m_Name
       value: Visual
+      objectReference: {fileID: 0}
+    - target: {fileID: 4903898727104760000, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605650089564361019, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8831767697407723654, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9076240093474169564, guid: f9357b1fe2f8c0741963787a50090259, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
