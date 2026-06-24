@@ -17,6 +17,9 @@ public enum SfxType
     NoCharge = 3,
     Attack = 4,
     Bounce = 5,
+    Damaged = 6,
+    Energy = 7,
+    Jump = 8,
 }
 
 [System.Serializable]

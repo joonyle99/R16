@@ -419,6 +419,7 @@ public sealed class PlayerBehaviour : SlingEntity
         _stunTimer = _stunDuration;
         _playerStatusVfx.ShowStun();
         PlayPlayerAnimation(PlayerAnimationState.Stun);
+        SoundManager.Instance.PlaySfx(SfxType.Damaged, 0.8f);
 
         // if (!_platformerSensor.IsGrounded)
         //     _blockAimUntilLanding = true;

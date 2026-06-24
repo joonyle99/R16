@@ -159,7 +159,7 @@ public sealed class PlayerAirState : StateBase<PlayerBehaviour>
         owner.SquashStretch.SetContactSurface(ContactSurface.Wall);
         owner.PlayPlayerAnimation(isBudgetKick ? PlayerAnimationState.Roll : PlayerAnimationState.Wall);
         owner.SquashStretch.HoldSideSquash();
-        SoundManager.Instance.PlaySfx(SfxType.Bounce);
+        SoundManager.Instance.PlaySfx(SfxType.Bounce, 1f);
         owner.PauseAndLaunch(owner.BouncePauseDuration, vel, () =>
         {
             _isHitPausing = false;

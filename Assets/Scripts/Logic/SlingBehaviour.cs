@@ -264,7 +264,8 @@ public class SlingBehaviour : MonoBehaviour
     {
         _isPendingShot = true;
 
-        SoundManager.Instance.PlaySfx(SfxType.Shoot);
+        if (!fromGround) SoundManager.Instance.PlaySfx(SfxType.Shoot, 1f);
+        else SoundManager.Instance.PlaySfx(SfxType.Jump, 1f);
         var shotDir = (-1) * dragOffset.normalized;
         LastShotDir = shotDir;
         LastShotFromGround = fromGround;
