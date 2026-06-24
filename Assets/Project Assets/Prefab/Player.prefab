@@ -15551,7 +15551,7 @@ MonoBehaviour:
   _knockbackY: 8
   _stunDuration: 0.3
   _invincibleDuration: 1.5
-  _propelledHitShake: 0.5
+  _propelledHitShake: 0.8
   _blinkInterval: 0.1
   _minAimSlowFill: 1
   _comboRushPreEffectDelay: 0.7
@@ -15562,7 +15562,8 @@ MonoBehaviour:
   _comboRushZoomScale: 0.8
   _comboRushZoomInDuration: 0.5
   _comboRushZoomOutDuration: 1
-  _comboRushConstantShake: 0.2
+  _comboRushIntroConstantShake: 0.2
+  _comboRushRumbleConstantShake: 0.015
   _comboRushHoverDuration: 0.3
   _energySfxDelay: 0.05
 --- !u!114 &1848701631826351291
