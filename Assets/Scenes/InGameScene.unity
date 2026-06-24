@@ -5427,7 +5427,7 @@ SpriteRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 4294967295
+  m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
@@ -11182,6 +11182,10 @@ PrefabInstance:
     - target: {fileID: 453091423277790703, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888270481033593306, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
+      propertyPath: m_RenderingLayerMask
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8046311126822299724, guid: 5fc8e1ff10c57e24a9117ac975cf8e2f, type: 3}
       propertyPath: m_Name
