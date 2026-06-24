@@ -46,7 +46,8 @@ public sealed class PlayerBehaviour : SlingEntity
     [SerializeField] private float _comboRushZoomScale = 0.8f; // 줌 배율 (1보다 작을수록 줌인)
     [SerializeField] private float _comboRushZoomInDuration = 0.05f; // 줌인 시간
     [SerializeField] private float _comboRushZoomOutDuration = 0.25f; // 줌아웃 (복귀) 시간
-    [SerializeField] private float _comboRushConstantShake = 0.2f; // 발동 시 카메라 셰이크 강도
+    [SerializeField] private float _comboRushIntroConstantShake = 0.2f; // 발동 시 카메라 셰이크 강도
+    [SerializeField] private float _comboRushRumbleConstantShake = 0.08f; // 러쉬 지속 중 상시 카메라 럼블 강도 (단발 히트 쉐이크 대체)
     [SerializeField] private float _comboRushHoverDuration = 0.25f; // 발동 직후 공중에 잠시 멈추는 시간 (중력 유예 → 조준할 여유)
 
     [SerializeField] private float _energySfxDelay = 0.2f;
@@ -268,7 +269,7 @@ public sealed class PlayerBehaviour : SlingEntity
             // 발동 연출(줌인/프리즈/이펙트) 중에는 시간을 깎지 않고, 연출이 끝난 뒤부터 카운트다운한다
             if (!_isComboRushIntro) _comboRushTimer = Mathf.Max(0f, _comboRushTimer - Time.unscaledDeltaTime);
             if (_comboRushTimer > 0f) _onComboRushChanged?.Invoke(_comboRushTimer, ComboRushDuration); // 러쉬 중 게이지를 남은 시간 카운트다운으로 갱신
-            else { _onComboRushChanged?.Invoke(0f, ComboRushDuration); _combo.Reset(); _playerDisplay.RefreshDisplay(); _playerDisplay.HideComboRushEffect(); } // 러쉬 종료(양수→0) 프레임에 콤보 리셋 → 일반 게이지가 빈 상태로 복귀 + 차지 오브 다시 표시
+            else { _onComboRushChanged?.Invoke(0f, ComboRushDuration); _combo.Reset(); _playerDisplay.RefreshDisplay(); _playerDisplay.HideComboRushEffect(); CameraController.StopConstantShake(); } // 러쉬 종료(양수→0) 프레임에 콤보 리셋 → 일반 게이지가 빈 상태로 복귀 + 차지 오브 다시 표시 + 럼블 정지
         }
 
         // 추진 상태의 진입/이탈 엣지 (grace 포함, IsPropelled 정의를 그대로 사용)
@@ -366,6 +367,7 @@ public sealed class PlayerBehaviour : SlingEntity
 
         _playerStatusVfx.HideAll();
         PlayPlayerAnimation(PlayerAnimationState.Die);
+        CameraController.StopConstantShake(); // 러쉬 중 사망 시 Tick이 early-return되어 럼블이 안 꺼지는 것 방지
         Rigid.simulated = false;
     }
 
@@ -574,10 +576,13 @@ public sealed class PlayerBehaviour : SlingEntity
 
     private IEnumerator HitEffectRoutine()
     {
-        var kickDir = (Vector2)Rigid.linearVelocity.normalized;
-        CameraController.Shake(kickDir, _propelledHitShake);
-        if (!IsComboRushActive) // 콤보 러쉬 중에는 히트 스탑 생략
+        // 콤보 러쉬 중에는 단발 히트 쉐이크/히트 스탑 모두 생략 — 러쉬 본편 동안 깔리는 상시 럼블이 타격감을 담당한다
+        if (!IsComboRushActive)
+        {
+            var kickDir = (Vector2)Rigid.linearVelocity.normalized;
+            CameraController.Shake(kickDir, _propelledHitShake);
             yield return HitStopRoutine(_enemyHitPauseDuration);
+        }
     }
 
     public IEnumerator HitStopRoutine(float duration)
@@ -652,7 +657,7 @@ public sealed class PlayerBehaviour : SlingEntity
         {
             SoundManager.Instance.PlaySfx(SfxType.Rush, 1f);
             EffectManager.Instance?.Play(VfxType.ComboRush, transform.position);
-            CameraController.BeginConstantShake(_comboRushConstantShake);
+            CameraController.BeginConstantShake(_comboRushIntroConstantShake);
         }
 
         yield return new WaitForSecondsRealtime(_comboRushFreezeDuration);
@@ -680,6 +685,7 @@ public sealed class PlayerBehaviour : SlingEntity
         {
             Rigid.linearVelocity = Vector2.up * SlingBehaviour.Config.comboRushSlingSpeed;
             Time.timeScale = _isAimSlowing ? _effectiveTimeScale : 1f;
+            CameraController.BeginConstantShake(_comboRushRumbleConstantShake); // 러쉬 본편 시작 — 지속 럼블로 질주감 부여 (러쉬 종료/사망 시 정지)
         }
     }
 
