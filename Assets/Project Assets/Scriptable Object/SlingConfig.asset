@@ -25,7 +25,7 @@ MonoBehaviour:
   aimSlowScale: 0.05
   aimSlowHoldDuration: 1
   aimSlowFadeDuration: 1.5
-  noChargePauseDuration: 0.4
+  noChargePauseDuration: 0.5
   circleCastRadius: 0.37
   minDistance: 2
   maxBounces: 2
