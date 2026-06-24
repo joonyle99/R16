@@ -108,9 +108,15 @@ MonoBehaviour:
   - type: 3
     clip: {fileID: 8300000, guid: 843c0b44d8135d747a52b2d74e631ef3, type: 3}
   - type: 4
-    clip: {fileID: 8300000, guid: 2ee5616b002a3974ca918c102de63e6f, type: 3}
+    clip: {fileID: 8300000, guid: 1768a9c9c1374854491aaf09a89d32c0, type: 3}
   - type: 5
     clip: {fileID: 8300000, guid: 0406d98c55ed2524c9765786db78e080, type: 3}
+  - type: 6
+    clip: {fileID: 8300000, guid: b3c3b89cc61721041ac990adc8e1dcd7, type: 3}
+  - type: 7
+    clip: {fileID: 8300000, guid: 11d562e6fa0b2da469a7bc91e1ee276f, type: 3}
+  - type: 8
+    clip: {fileID: 8300000, guid: ed88b68c8e506dd43b7b0260cbf1271a, type: 3}
   _bgmSource: {fileID: 7078179868914919910}
   _sfxSource: {fileID: 3617940627469263463}
   _bgmFadeDuration: 0.35
