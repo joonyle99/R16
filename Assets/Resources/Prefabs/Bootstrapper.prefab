@@ -97,7 +97,7 @@ MonoBehaviour:
   - type: 0
     clip: {fileID: 8300000, guid: a1de9b234342ac84886dbe64576e483f, type: 3}
   - type: 10
-    clip: {fileID: 8300000, guid: 2b7684f0901ba554a82a0574b020fe79, type: 3}
+    clip: {fileID: 8300000, guid: 10b02b6bb2dadab40878330e0887c5a6, type: 3}
   _sfxEntries:
   - type: 0
     clip: {fileID: 8300000, guid: c1e9eaac979a75c4189a4f2f25dc800f, type: 3}
@@ -117,6 +117,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 11d562e6fa0b2da469a7bc91e1ee276f, type: 3}
   - type: 8
     clip: {fileID: 8300000, guid: ed88b68c8e506dd43b7b0260cbf1271a, type: 3}
+  - type: 9
+    clip: {fileID: 8300000, guid: 8ac849e7a22a1ff46beecbf0744c0a9d, type: 3}
   _bgmSource: {fileID: 7078179868914919910}
   _sfxSource: {fileID: 3617940627469263463}
   _bgmFadeDuration: 0.35

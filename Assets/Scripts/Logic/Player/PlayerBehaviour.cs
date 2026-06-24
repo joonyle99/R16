@@ -38,13 +38,18 @@ public sealed class PlayerBehaviour : SlingEntity
 
     [SerializeField] private float _minAimSlowFill = 0.2f;
 
-    [SerializeField] private float _comboRushPreEffectDelay = 0.5f; // 줌인 후 이펙트 재생까지 텀
+    [SerializeField] private float _comboRushPreEffectDelay = 0.5f;
+    [SerializeField] private float _comboRushPre2EffectDelay = 0f;
     [SerializeField] private float _comboRushPostEffectDelay = 0.5f;
+    [SerializeField] private float _comboRushPost2EffectDelay = 0f;
     [SerializeField] private float _comboRushFreezeDuration = 0.18f; // 발동 시 완전 정지 시간 (실시간)
     [SerializeField] private float _comboRushZoomScale = 0.8f; // 줌 배율 (1보다 작을수록 줌인)
     [SerializeField] private float _comboRushZoomInDuration = 0.05f; // 줌인 시간
     [SerializeField] private float _comboRushZoomOutDuration = 0.25f; // 줌아웃 (복귀) 시간
-    [SerializeField] private float _comboRushShake = 0.6f; // 발동 시 카메라 셰이크 강도
+    [SerializeField] private float _comboRushConstantShake = 0.2f; // 발동 시 카메라 셰이크 강도
+    [SerializeField] private float _comboRushHoverDuration = 0.25f; // 발동 직후 공중에 잠시 멈추는 시간 (중력 유예 → 조준할 여유)
+
+    [SerializeField] private float _energySfxDelay = 0.2f;
 
     public bool IsPropelled => _fsm?.CurrState is PlayerAirState airState && airState.IsEffectivelyPropelled;
 
@@ -97,6 +102,7 @@ public sealed class PlayerBehaviour : SlingEntity
     public float ComboRushDuration => SlingBehaviour.Config.comboRushDuration;
     public bool IsComboRushActive => _comboRushTimer > 0f;
     private bool _isComboRushIntro; // 러쉬 발동 연출(줌인/이펙트/정지) 중 — 조준 차단
+    private float _comboRushHoverTimer; // >0 동안 중력 유예 (러쉬 진입 호버)
 
     private Vector2 _lastFixedVelocity; // 충돌 해소로 깎이기 전(FixedTick 끝) 속도 — 러쉬 파괴 판정에 사용
 
@@ -144,7 +150,9 @@ public sealed class PlayerBehaviour : SlingEntity
     private float _effectiveTimeScale = 1f;
     private float _defaultDragThreshold;
     private Coroutine _aimSlowCoroutine;
-    
+    private float _aimElapsed;
+    private bool _energySfxPlayed;
+
     private Action<int, int> _onComboChanged;
     private Action<float, float> _onComboRushChanged;
 
@@ -220,7 +228,10 @@ public sealed class PlayerBehaviour : SlingEntity
 
         _platformerSensor?.FixedTick(fixedDeltaTime);
 
-        if (_platformerSensor != null && !_platformerSensor.IsGrounded)
+        // 러쉬 진입 호버: 짧은 시간 동안 중력을 유예해 공중에 멈춘다 (발동 직후 무력하게 추락하는 느낌 방지)
+        if (_comboRushHoverTimer > 0f)
+            _comboRushHoverTimer = Mathf.Max(0f, _comboRushHoverTimer - fixedDeltaTime);
+        else if (_platformerSensor != null && !_platformerSensor.IsGrounded)
             ApplyGravity(fixedDeltaTime);
 
         _fsm?.FixedUpdate(fixedDeltaTime);
@@ -449,6 +460,9 @@ public sealed class PlayerBehaviour : SlingEntity
         _aimStartedGrounded = _platformerSensor.IsGrounded && !IsComboRushActive;
         SoundManager.Instance.PlaySfx(SfxType.AimDrag);
 
+        _aimElapsed = 0f;
+        _energySfxPlayed = false;
+
         // 콤보 러쉬 중에는 에임 슬로우를 걸지 않는다 (러쉬는 풀스피드 유지)
         if (!_aimSlowStartedThisPress && !IsComboRushActive)
         {
@@ -465,6 +479,17 @@ public sealed class PlayerBehaviour : SlingEntity
 
     private void UpdateAiming()
     {
+        // 조준선을 일정 시간(_energySfxDelay) 이상 유지했을 때만 에너지 SFX 재생
+        if (!_energySfxPlayed)
+        {
+            _aimElapsed += Time.unscaledDeltaTime;
+            if (_aimElapsed >= _energySfxDelay)
+            {
+                _energySfxPlayed = true;
+                SoundManager.Instance.PlaySfx(SfxType.Energy);
+            }
+        }
+
         // 조준 중 착지 시 그라운드 모드로 전환 (궤적·발사 방식 동기화)
         var isNowGrounded = _platformerSensor.IsGrounded && !IsComboRushActive;
         if (!_aimStartedGrounded && isNowGrounded)
@@ -489,6 +514,7 @@ public sealed class PlayerBehaviour : SlingEntity
             if (!pointerInput.JustTapped)
             {
                 EndAim();
+                _comboRushHoverTimer = 0f; // 발사하면 호버 종료 → 중력/관성 정상 복귀
                 SlingBehaviour.ShootSling(_lastDragOffset, !IsComboRushActive && !_aimStartedGrounded, _aimStartedGrounded);
                 ChangeState<PlayerAirState>(); // Air 재진입 → Enter의 ConsumeSling이 새 budget 생성
             }
@@ -607,6 +633,12 @@ public sealed class PlayerBehaviour : SlingEntity
 
     private IEnumerator ComboRushIntroRoutine()
     {
+        {
+            
+        }
+        
+        yield return new WaitForSecondsRealtime(_comboRushPre2EffectDelay);
+        
         // 1. pre delay 전
         {
             _isComboRushIntro = true;
@@ -615,33 +647,43 @@ public sealed class PlayerBehaviour : SlingEntity
             CancelAimSlow(); // 에임 슬로우 코루틴이 정지 연출의 timeScale을 덮어쓰지 않도록 끊는다
             Time.timeScale = 0f;
             _playerStatusVfx.HideAll(); // 러쉬 진입 — 추진/에너지/스턴만 초기화하고 러쉬 전용 이펙트는 유지(토글 경합 방지)
-            // CameraController.ZoomScale(_comboRushZoomScale, _comboRushZoomInDuration);
+            CameraController.ZoomScale(_comboRushZoomScale, _comboRushZoomInDuration);
         }
 
         yield return new WaitForSecondsRealtime(_comboRushPreEffectDelay);
 
         // 2. freeze duration 전
         {
+            SoundManager.Instance.PlaySfx(SfxType.Rush, 1f);
             EffectManager.Instance?.Play(VfxType.ComboRush, transform.position);
-            CameraController.BeginConstantShake(_comboRushShake);
+            CameraController.BeginConstantShake(_comboRushConstantShake);
         }
 
         yield return new WaitForSecondsRealtime(_comboRushFreezeDuration);
 
         // 3. post delay 전
         {
-            // CameraController.ResetZoom(_comboRushZoomOutDuration);
+            CameraController.StopConstantShake();
         }
 
         yield return new WaitForSecondsRealtime(_comboRushPostEffectDelay);
 
         // 4. post delay 후
         {
-            CameraController.StopConstantShake();
+            // CameraController.Shake(5f);
+            // TODO: 여기서 이펙트 터트리기 (분리 요청해서)
             _playerDisplay.RefreshDisplay(); // 러쉬 진입 — 차지 오브 숨김
-            _playerDisplay.ShowComboRushEffect();
-            Time.timeScale = _isAimSlowing ? _effectiveTimeScale : 1f;
+            // _playerDisplay.ShowComboRushEffect();
+            _comboRushHoverTimer = _comboRushHoverDuration; // 잠시 공중에 멈춰 조준할 여유를 준다
+            CameraController.ResetZoom(_comboRushZoomOutDuration);
             _isComboRushIntro = false;
+        }
+
+        yield return new WaitForSecondsRealtime(_comboRushPost2EffectDelay);
+
+        {
+            Rigid.linearVelocity = Vector2.zero; // 발동 직전 하강 관성 제거 → 깔끔한 정지
+            Time.timeScale = _isAimSlowing ? _effectiveTimeScale : 1f;
         }
     }
 

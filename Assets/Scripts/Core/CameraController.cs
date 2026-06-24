@@ -31,6 +31,7 @@ public class CameraController : MonoBehaviour
     [SerializeField] private float _riseSpeed = 8f;  // 플레이어 상승 시 카메라 추적 속도
     [SerializeField] private float _fallSpeed = 3f;  // 플레이어 하강 시 카메라 추적 속도
     private float _verticalOffset;
+    private float _followY; // 셰이크가 섞이지 않은 인게임 카메라 베이스 Y (셰이크 누적 방지)
     private Transform _followTarget;
     private Tween _zoomTween;
     private Tween _offsetTween;
@@ -42,6 +43,8 @@ public class CameraController : MonoBehaviour
     private float _fixedY;
     private float _baseOrthoSize;
     private CameraShaker _shaker;
+
+    public float BaseOrthoSize => _baseOrthoSize; // 줌과 무관한 기준 크기 (줌 영향 받지 않을 요소용)
 
     public void LateTick(float deltaTime)
     {
@@ -57,14 +60,26 @@ public class CameraController : MonoBehaviour
         {
             if (_followTarget == null) return;
 
-            var pos = transform.position;
             var targetY = _followTarget.position.y + _verticalOffset;
             if (targetY < _minY) targetY = _minY; // 하한선 아래로는 추적하지 않음
-            pos.x = _fixedX;
-            float speed = targetY > pos.y ? _riseSpeed : _fallSpeed;
-            pos.y = Mathf.Lerp(pos.y, targetY, deltaTime * speed);
-            pos += (Vector3)_shaker.LateTick(Time.unscaledDeltaTime);
-            transform.position = pos;
+
+            // 평소엔 _fixedX 고정(성벽 폭이 기본 ortho에 딱 맞음). 줌인 시 가시 폭이 좁아져 생긴 여유만큼만
+            // 좌우로 움직여 플레이어를 프레임에 잡되, 성벽 밖이 보이지 않도록 클램프한다.
+            // 줌이 기본 배율로 복귀하면 이동 가능 폭이 0이 되어 자동으로 _fixedX로 되돌아온다.
+            var maxHorizontalPan = (_baseOrthoSize - _mainCamera.orthographicSize) * CameraAspect;
+            var leftBound = _fixedX - maxHorizontalPan;
+            var rightBound = _fixedX + maxHorizontalPan;
+            var baseX = maxHorizontalPan > 0f
+                ? Mathf.Clamp(_followTarget.position.x, leftBound, rightBound)
+                : _fixedX;
+
+            // 베이스 Y는 셰이크가 섞이지 않은 _followY에서만 누적한다. 셰이크는 마지막에 순수 오프셋으로 얹어
+            // timeScale=0(줌 정지) 구간에서도 셰이크가 위치에 쌓여 드리프트하지 않도록 한다.
+            float speed = targetY > _followY ? _riseSpeed : _fallSpeed;
+            _followY = Mathf.Lerp(_followY, targetY, deltaTime * speed);
+
+            var shake = (Vector3)_shaker.LateTick(Time.unscaledDeltaTime);
+            transform.position = new Vector3(baseX, _followY, transform.position.z) + shake;
         }
     }
 
@@ -161,6 +176,7 @@ public class CameraController : MonoBehaviour
         pos.x = _fixedX;
         pos.y = target.position.y + _verticalOffset;
         transform.position = pos;
+        _followY = pos.y; // 베이스 Y 동기화 (LateTick이 이 값에서 lerp)
     }
 
     // 카메라가 내려갈 수 있는 월드 Y 하한선을 설정한다 (역주행 방지).
@@ -189,6 +205,9 @@ public class CameraController : MonoBehaviour
     // =========== ... ===========
 
     public void Shake(Vector2 direction, float force) => _shaker?.Shake(direction, force);
+
+    // 방향 없이 무작위 방향으로 흔든다 — "그냥 화면 흔들림"용
+    public void Shake(float force = 0.3f) => _shaker?.Shake(force);
 
     public void BeginConstantShake(float force) => _shaker?.BeginConstantShake(force);
     public void StopConstantShake() => _shaker?.StopConstantShake();

@@ -30,6 +30,7 @@ public class PursuerActor : MonoBehaviour
     public Animator Animator { get; private set; }
 
     private Camera _camera;
+    private float _baseOrthoSize; // 줌과 무관한 기준 크기 — 줌인/아웃 시 추격자가 따라 올라오지 않게 한다
     private int _currTier;
     private float _currViewportY;
     private bool _isSleeping;
@@ -48,18 +49,22 @@ public class PursuerActor : MonoBehaviour
     public void LateTick()
     {
         if (_camera == null) return;
-        var viewportPos = new Vector3(_fixedViewportX, _currViewportY, 0f);
-        var worldPos = _camera.ViewportToWorldPoint(viewportPos);
-        transform.position = new Vector3(worldPos.x, worldPos.y, 0f);
+        // ViewportToWorldPoint는 현재(줌된) orthographicSize를 쓰므로 줌인 시 추격자가 따라 올라온다.
+        // 기준 크기(_baseOrthoSize)로 직접 환산해 줌과 무관한 화면 위치를 유지한다.
+        var camPos = _camera.transform.position;
+        var worldX = camPos.x + (_fixedViewportX - 0.5f) * 2f * _baseOrthoSize * _camera.aspect;
+        var worldY = camPos.y + (_currViewportY - 0.5f) * 2f * _baseOrthoSize;
+        transform.position = new Vector3(worldX, worldY, 0f);
     }
 
     private void OnDestroy() => _tween?.Kill();
 
-    public void Initialize(Camera camera, PlayerBehaviour player, int startTier)
+    public void Initialize(Camera camera, float baseOrthoSize, PlayerBehaviour player, int startTier)
     {
         Animator = GetComponentInChildren<Animator>();
 
         _camera = camera;
+        _baseOrthoSize = baseOrthoSize;
         _currTier = startTier;
         _currViewportY = ViewportYForTier(startTier);
         _isSleeping = true;

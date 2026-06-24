@@ -15554,13 +15554,17 @@ MonoBehaviour:
   _propelledHitShake: 0.5
   _blinkInterval: 0.1
   _minAimSlowFill: 1
-  _comboRushPreEffectDelay: 0.5
+  _comboRushPreEffectDelay: 0.7
+  _comboRushPre2EffectDelay: 0
   _comboRushPostEffectDelay: 1
+  _comboRushPost2EffectDelay: 0.7
   _comboRushFreezeDuration: 1.7
   _comboRushZoomScale: 0.6
   _comboRushZoomInDuration: 0.5
-  _comboRushZoomOutDuration: 0.2
-  _comboRushShake: 0.2
+  _comboRushZoomOutDuration: 1
+  _comboRushConstantShake: 0.2
+  _comboRushHoverDuration: 0.3
+  _energySfxDelay: 0.05
 --- !u!114 &1848701631826351291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30719,7 +30723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8262474032780329117, guid: 8b3387297e878284e82c8a6c15d2c84e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6000001
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 8262474032780329117, guid: 8b3387297e878284e82c8a6c15d2c84e, type: 3}
       propertyPath: m_LocalScale.z

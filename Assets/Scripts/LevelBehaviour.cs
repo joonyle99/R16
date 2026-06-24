@@ -59,7 +59,7 @@ public class LevelBehaviour : MonoBehaviour
         _player = GetComponentInChildren<PlayerBehaviour>();
         _player?.Initialize(cameraController, pointerInput, onComboChanged, onComboRushChanged, null, null);
         _pursuerActor = GetComponentInChildren<PursuerActor>();
-        _pursuerActor.Initialize(cameraController.MainCamera, _player, PursuerState.START_TIER);
+        _pursuerActor.Initialize(cameraController.MainCamera, cameraController.BaseOrthoSize, _player, PursuerState.START_TIER);
         _pursuerState = new PursuerState();
         _enemies = GetComponentsInChildren<EnemyBehaviour>();
         foreach (var enemy in _enemies)

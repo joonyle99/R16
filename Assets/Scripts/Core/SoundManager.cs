@@ -20,6 +20,7 @@ public enum SfxType
     Damaged = 6,
     Energy = 7,
     Jump = 8,
+    Rush = 9,
 }
 
 [System.Serializable]

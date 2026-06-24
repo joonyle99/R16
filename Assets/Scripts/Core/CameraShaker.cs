@@ -41,6 +41,9 @@ public class CameraShaker : MonoBehaviour
         _magnitude = magnitude;
     }
 
+    // 방향 없이 무작위 방향으로 흔든다 — "그냥 화면 흔들림"용
+    public void Shake(float magnitude) => Shake(Random.insideUnitCircle.normalized, magnitude);
+
     public void BeginConstantShake(float magnitude) => _constMagnitude = magnitude;
     public void StopConstantShake() => _constMagnitude = 0f;
 
