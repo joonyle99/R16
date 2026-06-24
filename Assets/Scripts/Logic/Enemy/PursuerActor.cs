@@ -1,0 +1,163 @@
+using DG.Tweening;
+using UnityEngine;
+using JoonyleGameDevKit;
+
+public enum PursuerAnimationState { Sleep, Idle, Hit, Climb }
+
+/// <summary>
+/// 추격자 월드 오브젝트. PursuerState.OnTierChanged를 받아 화면 기준 위치로 이동한다.
+/// Camera.ViewportToWorldPoint를 LateUpdate에서 매 프레임 계산하여 카메라 스크롤에 추종한다.
+/// </summary>
+public class PursuerActor : MonoBehaviour
+{
+    private static readonly int SLEEP = Animator.StringToHash("Sleep");
+    private static readonly int IDLE  = Animator.StringToHash("Idle");
+    private static readonly int HIT   = Animator.StringToHash("Hit");
+    private static readonly int CLIMB = Animator.StringToHash("Climb");
+    
+    private static readonly int IDLE_RED  = Animator.StringToHash("Idle_Red");
+    private static readonly int HIT_RED   = Animator.StringToHash("Hit_Red");
+    private static readonly int CLIMB_RED = Animator.StringToHash("Climb_Red");
+
+    [SerializeField] private float _fixedViewportX = 0.5f;
+    [SerializeField] private float _tier1ViewportY = -0.1f;
+    [SerializeField] private float _tier2ViewportY = 0.05f;
+    [SerializeField] private float _tier3ViewportY = 0.25f;
+    [SerializeField] private float _moveDuration = 0.4f;
+    [SerializeField] private Ease _easeDown = Ease.OutBack;
+    [SerializeField] private Ease _easeUp = Ease.InOutQuad;
+
+    public Animator Animator { get; private set; }
+
+    private Camera _camera;
+    private int _currTier;
+    private float _currViewportY;
+    private bool _isSleeping;
+    private Tweener _tween;
+
+    private StateMachine<PursuerActor> _fsm;
+
+    private PursuerEyeTracker _pursuerEyeTreacker;
+
+    public void Tick(float deltaTime)
+    {
+        _fsm?.Update(deltaTime);
+        _pursuerEyeTreacker?.Tick(deltaTime);
+    }
+
+    public void LateTick()
+    {
+        if (_camera == null) return;
+        var viewportPos = new Vector3(_fixedViewportX, _currViewportY, 0f);
+        var worldPos = _camera.ViewportToWorldPoint(viewportPos);
+        transform.position = new Vector3(worldPos.x, worldPos.y, 0f);
+    }
+
+    private void OnDestroy() => _tween?.Kill();
+
+    public void Initialize(Camera camera, PlayerBehaviour player, int startTier)
+    {
+        Animator = GetComponentInChildren<Animator>();
+
+        _camera = camera;
+        _currTier = startTier;
+        _currViewportY = ViewportYForTier(startTier);
+        _isSleeping = true;
+
+        _fsm = new StateMachine<PursuerActor>(this);
+        _fsm.AddState(new PursuerSleepState());
+        _fsm.AddState(new PursuerIdleState());
+        _fsm.AddState(new PursuerClimbState());
+        _fsm.AddState(new PursuerHitState());
+
+        _pursuerEyeTreacker = GetComponentInChildren<PursuerEyeTracker>();
+        _pursuerEyeTreacker?.Initialize(player.Rigid);
+
+        // ChangeState<PursuerSleepState>();
+
+        TransitionToTierState();
+    }
+
+    public void ChangeState<TState>() where TState : StateBase<PursuerActor> => _fsm.ChangeState<TState>();
+    
+    // ========== ... ==========
+
+    public void OnStateChanged(InGameState prev, InGameState curr)
+    {
+        _isSleeping = false; // curr == InGameState.Wait;
+        TransitionToTierState();
+    }
+
+    // ========== ... ==========
+
+    public void MoveToTier(int fromTier, int toTier)
+    {
+        _currTier = toTier;
+
+        var ease = toTier < fromTier ? _easeDown : _easeUp;
+        _tween?.Kill();
+        _tween = DOTween.To(
+            () => _currViewportY,
+            y => _currViewportY = y,
+            ViewportYForTier(toTier),
+            _moveDuration
+        ).SetEase(ease);
+
+        _pursuerEyeTreacker?.SetCrazy(toTier >= PursuerState.MAX_TIER);
+
+        if (toTier > fromTier) ChangeState<PursuerClimbState>();
+        else if (toTier < fromTier) ChangeState<PursuerHitState>();
+    }
+
+    public void TransitionToTierState()
+    {
+        if (_isSleeping) ChangeState<PursuerSleepState>();
+        else ChangeState<PursuerIdleState>();
+    }
+
+    private float ViewportYForTier(int tier) => tier switch
+    {
+        1 => _tier1ViewportY,
+        2 => _tier2ViewportY,
+        _ => _tier3ViewportY,
+    };
+
+    // ========== ... ==========
+
+    public void PlayAnimation(PursuerAnimationState state)
+    {
+        var red = _currTier >= PursuerState.MAX_TIER;
+        
+        switch (state)
+        {
+            case PursuerAnimationState.Sleep: PlayAnimation(SLEEP);                      break;
+            case PursuerAnimationState.Idle:  PlayAnimation(red ? IDLE_RED  : IDLE);    break;
+            case PursuerAnimationState.Hit:   PlayAnimation(red ? HIT_RED   : HIT);     break;
+            case PursuerAnimationState.Climb: PlayAnimation(red ? CLIMB_RED : CLIMB);   break;
+        }
+    }
+
+    public void PlayAnimation(int stateHash, float crossFade = 0f) => Animator.CrossFade(stateHash, crossFade);
+
+#if UNITY_EDITOR
+    private void OnDrawGizmosSelected()
+    {
+        var cam = Camera.main;
+        if (cam == null) return;
+
+        var tiers = new (int tier, float y, Color color)[]
+        {
+            (1, _tier1ViewportY, Color.green),
+            (2, _tier2ViewportY, Color.yellow),
+            (3, _tier3ViewportY, Color.red),
+        };
+
+        foreach (var (tier, viewportY, color) in tiers)
+        {
+            Gizmos.color = color;
+            var worldPos = cam.ViewportToWorldPoint(new Vector3(_fixedViewportX, viewportY, 0f));
+            Gizmos.DrawSphere(new Vector3(worldPos.x, worldPos.y, 0f), 0.2f);
+        }
+    }
+#endif
+}

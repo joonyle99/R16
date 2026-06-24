@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5861d214f53159042bdc04d30102a637, type: 3}
+  m_Name: MissionConfig
+  m_EditorClassIdentifier: Assembly-CSharp::MissionConfig
+  bandHeight: 20
+  baseTotalKills: 3
+  killsPerDifficulty: 1
+  maxTotalKills: 12
+  baseTypes: 1
+  typesPerDifficulty: 0.5
+  maxTypes: 3
+  baseTimeLimit: 12
+  timeLimitPerKill: 2
+  maxTimeLimit: 30

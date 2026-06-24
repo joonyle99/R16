@@ -1,0 +1,495 @@
+fileFormatVersion: 2
+guid: eb360341d03e2624aa9fe6414cc8279e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2424553518018739129
+    second: boss_0
+  - first:
+      213: -3588229512158965765
+    second: boss_1
+  - first:
+      213: -6963195877183015321
+    second: boss_2
+  - first:
+      213: 7801903984715115176
+    second: boss_3
+  - first:
+      213: -5888845342232556802
+    second: boss_4
+  - first:
+      213: -7366506907712603825
+    second: boss_5
+  - first:
+      213: 5981802871748074552
+    second: boss_6
+  - first:
+      213: -8797041637764437337
+    second: boss_7
+  - first:
+      213: -6067672718842985316
+    second: boss_8
+  - first:
+      213: 8484074019104989873
+    second: boss_9
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: boss_body_red
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 1248
+        width: 886
+        height: 799
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 26, z: 0, w: 728}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744c193db614a5ed0800000000000000
+      internalID: -2424553518018739129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_hand2_red
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 324
+        width: 305
+        height: 902
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 344, z: 0, w: 535}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bff013b154c043ec0800000000000000
+      internalID: -3588229512158965765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye_red
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1020
+        width: 224
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766ba070e32cd5f90800000000000000
+      internalID: -6963195877183015321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_hand_red
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 324
+        width: 269
+        height: 919
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 320, z: 0, w: 584}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa26ac765ee54c60800000000000000
+      internalID: 7801903984715115176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye_back_red
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 783
+        width: 302
+        height: 230
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efac3079c5e964ea0800000000000000
+      internalID: -5888845342232556802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye_back2_red
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 515
+        width: 318
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4934523ff8e4c990800000000000000
+      internalID: -7366506907712603825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye_up_red
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 395
+        width: 298
+        height: 105
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83c94f6d402a30350800000000000000
+      internalID: 5981802871748074552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye_up4_red
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 14
+        width: 318
+        height: 250
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aaeaba3d31aae580800000000000000
+      internalID: -8797041637764437337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye_up2_red
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 231
+        width: 300
+        height: 151
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9409046fcb4bcba0800000000000000
+      internalID: -6067672718842985316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_eye_up3_red
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 31
+        width: 298
+        height: 160
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b2afdcae5c7db570800000000000000
+      internalID: 8484074019104989873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_red_eyeup1
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 219
+        width: 215
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd45c35c90936c43b95397204958c16
+      internalID: 972264133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_red_eyeup2
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 107
+        width: 127
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2164b4f61b26cd441919f4af5c4a053f
+      internalID: 443769331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_red_eyeup3
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 110
+        width: 123
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f326a6a3face8e4db3a3244a5ae35a1
+      internalID: 155639586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss_red_eyeup4
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 30
+        width: 137
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0744e6ef6a0d40c48a13aa9416e28516
+      internalID: 440475231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6ea6f1d264749964e8bff144d54ca5e1
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      boss_body_red: -2424553518018739129
+      boss_eye_back2_red: -7366506907712603825
+      boss_eye_back_red: -5888845342232556802
+      boss_eye_red: -6963195877183015321
+      boss_eye_up2_red: -6067672718842985316
+      boss_eye_up3_red: 8484074019104989873
+      boss_eye_up4_red: -8797041637764437337
+      boss_eye_up_red: 5981802871748074552
+      boss_hand2_red: -3588229512158965765
+      boss_hand_red: 7801903984715115176
+      boss_red_eyeup1: 972264133
+      boss_red_eyeup2: 443769331
+      boss_red_eyeup3: 155639586
+      boss_red_eyeup4: 440475231
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

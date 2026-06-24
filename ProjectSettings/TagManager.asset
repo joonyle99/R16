@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - SpritePiece
+  - Water
+  - UI
+  - OverUI
+  - Enemy
+  - Ground
+  - Platform
+  - EnemyBody
+  - Player
+  - Boundary
+  - UnderUI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background 3
+    uniqueID: 247797663
+    locked: 0
+  - name: Background 2
+    uniqueID: 3427089877
+    locked: 0
+  - name: Background 1
+    uniqueID: 69145921
+    locked: 0
+  - name: UnderDefault 3
+    uniqueID: 2905306603
+    locked: 0
+  - name: UnderDefault 2
+    uniqueID: 27960145
+    locked: 0
+  - name: UnderDefault 1
+    uniqueID: 3359934381
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: OverDefault 1
+    uniqueID: 2542080469
+    locked: 0
+  - name: OverDefault 2
+    uniqueID: 2927375749
+    locked: 0
+  - name: OverDefault 3
+    uniqueID: 2352671095
+    locked: 0
+  - name: Forground 1
+    uniqueID: 3543627143
+    locked: 0
+  - name: Forground 2
+    uniqueID: 1766834413
+    locked: 0
+  - name: Forground 3
+    uniqueID: 3918719049
+    locked: 0
+  - name: VFX
+    uniqueID: 965959161
+    locked: 0
+  - name: UnderUI
+    uniqueID: 634560259
+    locked: 0
+  - name: UI
+    uniqueID: 1723227829
+    locked: 0
+  - name: OverUI
+    uniqueID: 1762890149
+    locked: 0
+  m_RenderingLayers:
+  - Default

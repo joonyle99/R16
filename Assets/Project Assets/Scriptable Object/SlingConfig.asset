@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 619baba91b2fc834dad2bc8fd6df9c20, type: 3}
+  m_Name: SlingConfig
+  m_EditorClassIdentifier: Assembly-CSharp::ShotConfig
+  slingGravity: 60
+  groundSlingSpeed: 30
+  airSlingSpeed: 45
+  comboRushSlingSpeed: 70
+  slingTime: 0.35
+  bonusTime: 0.15
+  propelledGraceDuration: 0.01
+  wallAngleThreshold: 10
+  groundShotMaxAngle: 10
+  groundShotAimLineLength: 3
+  aimSlowScale: 0.05
+  aimSlowHoldDuration: 1
+  aimSlowFadeDuration: 1.5
+  noChargePauseDuration: 0.4
+  circleCastRadius: 0.37
+  minDistance: 2
+  maxBounces: 2
+  bonusKickCount: 0
+  wallRepelSpeed: 2
+  baseCharges: 3
+  minArrowDistance: 1.5
+  comboRushDuration: 5
+  comboRushThreshold: 15
+  comboRushMissionChain: 3
+  comboRushSmashUpSpeed: 3
+  comboRushSmashSideSpeed: 3
+  kick:
+    speed: 35
+    angle: 80

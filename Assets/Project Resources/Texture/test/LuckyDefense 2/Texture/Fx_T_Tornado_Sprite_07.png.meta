@@ -1,0 +1,1417 @@
+fileFormatVersion: 2
+guid: da7b5330197d1934fa555c6907cb9fac
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6903147828427714819
+    second: Fx_T_Tornado_Sprite_07_0
+  - first:
+      213: 6790518687441685067
+    second: Fx_T_Tornado_Sprite_07_1
+  - first:
+      213: 3059840514320818512
+    second: Fx_T_Tornado_Sprite_07_2
+  - first:
+      213: 2949239804443369481
+    second: Fx_T_Tornado_Sprite_07_3
+  - first:
+      213: -5403599478542875800
+    second: Fx_T_Tornado_Sprite_07_4
+  - first:
+      213: -6037239609785952632
+    second: Fx_T_Tornado_Sprite_07_5
+  - first:
+      213: 8575504507537379764
+    second: Fx_T_Tornado_Sprite_07_6
+  - first:
+      213: -3970830990104143082
+    second: Fx_T_Tornado_Sprite_07_7
+  - first:
+      213: 691616446677824654
+    second: Fx_T_Tornado_Sprite_07_8
+  - first:
+      213: 574301840072137482
+    second: Fx_T_Tornado_Sprite_07_9
+  - first:
+      213: -8864761997162984186
+    second: Fx_T_Tornado_Sprite_07_10
+  - first:
+      213: 4484065061803158024
+    second: Fx_T_Tornado_Sprite_07_11
+  - first:
+      213: 1584495481476360915
+    second: Fx_T_Tornado_Sprite_07_12
+  - first:
+      213: -1210935954521587840
+    second: Fx_T_Tornado_Sprite_07_13
+  - first:
+      213: -3463712342198180973
+    second: Fx_T_Tornado_Sprite_07_14
+  - first:
+      213: -5355444260230887751
+    second: Fx_T_Tornado_Sprite_07_15
+  - first:
+      213: 1551098689804577268
+    second: Fx_T_Tornado_Sprite_07_16
+  - first:
+      213: -3978073958112287580
+    second: Fx_T_Tornado_Sprite_07_17
+  - first:
+      213: -4063524924169099121
+    second: Fx_T_Tornado_Sprite_07_18
+  - first:
+      213: 5247554457918520668
+    second: Fx_T_Tornado_Sprite_07_19
+  - first:
+      213: -4829861313275841426
+    second: Fx_T_Tornado_Sprite_07_20
+  - first:
+      213: -2820298918222269766
+    second: Fx_T_Tornado_Sprite_07_21
+  - first:
+      213: -7284476323196806108
+    second: Fx_T_Tornado_Sprite_07_22
+  - first:
+      213: -7168397712121501200
+    second: Fx_T_Tornado_Sprite_07_23
+  - first:
+      213: 9115125445423122525
+    second: Fx_T_Tornado_Sprite_07_24
+  - first:
+      213: 5067989663452851159
+    second: Fx_T_Tornado_Sprite_07_25
+  - first:
+      213: 1605744422115022517
+    second: Fx_T_Tornado_Sprite_07_26
+  - first:
+      213: 498332802368370611
+    second: Fx_T_Tornado_Sprite_07_27
+  - first:
+      213: -251700863104462163
+    second: Fx_T_Tornado_Sprite_07_28
+  - first:
+      213: -3211266576326246336
+    second: Fx_T_Tornado_Sprite_07_29
+  - first:
+      213: -4145833200661827424
+    second: Fx_T_Tornado_Sprite_07_30
+  - first:
+      213: -6716491652494612737
+    second: Fx_T_Tornado_Sprite_07_31
+  - first:
+      213: -4740214029518005203
+    second: Fx_T_Tornado_Sprite_07_32
+  - first:
+      213: 4308179877116518459
+    second: Fx_T_Tornado_Sprite_07_33
+  - first:
+      213: -1806997011148226130
+    second: Fx_T_Tornado_Sprite_07_34
+  - first:
+      213: -8680287122915561280
+    second: Fx_T_Tornado_Sprite_07_35
+  - first:
+      213: 8999942476875999181
+    second: Fx_T_Tornado_Sprite_07_36
+  - first:
+      213: -8341010426732148621
+    second: Fx_T_Tornado_Sprite_07_37
+  - first:
+      213: -5063328470456580326
+    second: Fx_T_Tornado_Sprite_07_38
+  - first:
+      213: 3839518340300772623
+    second: Fx_T_Tornado_Sprite_07_39
+  - first:
+      213: -409728746503836521
+    second: Fx_T_Tornado_Sprite_07_40
+  - first:
+      213: -1742680188128303765
+    second: Fx_T_Tornado_Sprite_07_41
+  - first:
+      213: -1020028715101016396
+    second: Fx_T_Tornado_Sprite_07_42
+  - first:
+      213: 6267981984298268257
+    second: Fx_T_Tornado_Sprite_07_43
+  - first:
+      213: -2023613316455494180
+    second: Fx_T_Tornado_Sprite_07_44
+  - first:
+      213: -2360450260992842484
+    second: Fx_T_Tornado_Sprite_07_45
+  - first:
+      213: -6929853184090542685
+    second: Fx_T_Tornado_Sprite_07_46
+  - first:
+      213: 8040300798704349946
+    second: Fx_T_Tornado_Sprite_07_47
+  - first:
+      213: -7272767661547756953
+    second: Fx_T_Tornado_Sprite_07_48
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_0
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 941
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30171712068eccf50800000000000000
+      internalID: 6903147828427714819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_1
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 844
+        width: 135
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4a0d9db4c4cc3e50800000000000000
+      internalID: 6790518687441685067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_2
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 950
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 051e07d6cbcb67a20800000000000000
+      internalID: 3059840514320818512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 845
+        width: 120
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9002a45f9fdcde820800000000000000
+      internalID: 2949239804443369481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 834
+        width: 125
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86347fc57ee8205b0800000000000000
+      internalID: -5403599478542875800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_5
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 897
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8865ac2cf8a673ca0800000000000000
+      internalID: -6037239609785952632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_6
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 841
+        width: 128
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b1d6852aef420770800000000000000
+      internalID: 8575504507537379764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 827
+        width: 39
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61bdabbb046c4e8c0800000000000000
+      internalID: -3970830990104143082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 639
+        width: 45
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84bc017e7d199900800000000000000
+      internalID: 691616446677824654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_9
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 587
+        width: 66
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b5a531b7458f700800000000000000
+      internalID: 574301840072137482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 630
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60dc7bc5ee90af480800000000000000
+      internalID: -8864761997162984186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_11
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 566
+        width: 139
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a64868a699a3e30800000000000000
+      internalID: 4484065061803158024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_12
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 570
+        width: 145
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da2c91de324df510800000000000000
+      internalID: 1584495481476360915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_13
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 571
+        width: 144
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08ffdf84a24e13fe0800000000000000
+      internalID: -1210935954521587840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_14
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 593
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393242fe9fb6eefc0800000000000000
+      internalID: -3463712342198180973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_15
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 602
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b68886d1d3ada5b0800000000000000
+      internalID: -5355444260230887751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_16
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 573
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f920615a0c968510800000000000000
+      internalID: 1551098689804577268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_17
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 560
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a42c74dfca0bc8c0800000000000000
+      internalID: -3978073958112287580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_18
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 347
+        width: 149
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8864f66c957b97c0800000000000000
+      internalID: -4063524924169099121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_19
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 379
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5d30cb0afe03d840800000000000000
+      internalID: 5247554457918520668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_20
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 418
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e64bacba9b2e8fcb0800000000000000
+      internalID: -4829861313275841426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_21
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 348
+        width: 74
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab271f293194cd8d0800000000000000
+      internalID: -2820298918222269766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_22
+      rect:
+        serializedVersion: 2
+        x: 594
+        y: 389
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42c5c1df06758ea90800000000000000
+      internalID: -7284476323196806108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_23
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 409
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f96648b24cb48c90800000000000000
+      internalID: -7168397712121501200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_24
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 395
+        width: 42
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58c1917c4e6f7e70800000000000000
+      internalID: 9115125445423122525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_25
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 308
+        width: 54
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db657f5fbd155640800000000000000
+      internalID: 5067989663452851159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_26
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 309
+        width: 109
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b61b385b00c84610800000000000000
+      internalID: 1605744422115022517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_27
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 355
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b777112b0f6ae600800000000000000
+      internalID: 498332802368370611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_28
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 306
+        width: 103
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2dff80667c18cf0800000000000000
+      internalID: -251700863104462163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_29
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 321
+        width: 97
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0404df6101a4f63d0800000000000000
+      internalID: -3211266576326246336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_30
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 348
+        width: 73
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a0f7886baa0776c0800000000000000
+      internalID: -4145833200661827424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_31
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 299
+        width: 11
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff6ae247d6a3ac2a0800000000000000
+      internalID: -6716491652494612737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_32
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 99
+        width: 34
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c91437470673eb0800000000000000
+      internalID: -4740214029518005203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_33
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 157
+        width: 23
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b302404c5cab9cb30800000000000000
+      internalID: 4308179877116518459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_34
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 158
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea14150dac14ce6e0800000000000000
+      internalID: -1806997011148226130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_35
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 150
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c078321adc698780800000000000000
+      internalID: -8680287122915561280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_36
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 152
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc7a42dbff736ec70800000000000000
+      internalID: 8999942476875999181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_37
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 81
+        width: 89
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3780dce9537ce3c80800000000000000
+      internalID: -8341010426732148621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_38
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 160
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a17405135917bb9b0800000000000000
+      internalID: -5063328470456580326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_39
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 141
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f05993e7695b84530800000000000000
+      internalID: 3839518340300772623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_40
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 158
+        width: 23
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c6f5a30e9505af0800000000000000
+      internalID: -409728746503836521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_41
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 137
+        width: 51
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65608d1a91c0d7e0800000000000000
+      internalID: -1742680188128303765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_42
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 111
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bea4b7b94128d1f0800000000000000
+      internalID: -1020028715101016396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_43
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 113
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16675a0d7685cf650800000000000000
+      internalID: 6267981984298268257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_44
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 120
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd8be5096eaae3e0800000000000000
+      internalID: -2023613316455494180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_45
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 77
+        width: 70
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c052b8b6efefd3fd0800000000000000
+      internalID: -2360450260992842484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_46
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 78
+        width: 100
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ad6ca8be3734df90800000000000000
+      internalID: -6929853184090542685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_47
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 95
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2ff022af2e49f60800000000000000
+      internalID: 8040300798704349946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fx_T_Tornado_Sprite_07_48
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 94
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7626f773850f11b90800000000000000
+      internalID: -7272767661547756953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Fx_T_Tornado_Sprite_07_0: 6903147828427714819
+      Fx_T_Tornado_Sprite_07_1: 6790518687441685067
+      Fx_T_Tornado_Sprite_07_10: -8864761997162984186
+      Fx_T_Tornado_Sprite_07_11: 4484065061803158024
+      Fx_T_Tornado_Sprite_07_12: 1584495481476360915
+      Fx_T_Tornado_Sprite_07_13: -1210935954521587840
+      Fx_T_Tornado_Sprite_07_14: -3463712342198180973
+      Fx_T_Tornado_Sprite_07_15: -5355444260230887751
+      Fx_T_Tornado_Sprite_07_16: 1551098689804577268
+      Fx_T_Tornado_Sprite_07_17: -3978073958112287580
+      Fx_T_Tornado_Sprite_07_18: -4063524924169099121
+      Fx_T_Tornado_Sprite_07_19: 5247554457918520668
+      Fx_T_Tornado_Sprite_07_2: 3059840514320818512
+      Fx_T_Tornado_Sprite_07_20: -4829861313275841426
+      Fx_T_Tornado_Sprite_07_21: -2820298918222269766
+      Fx_T_Tornado_Sprite_07_22: -7284476323196806108
+      Fx_T_Tornado_Sprite_07_23: -7168397712121501200
+      Fx_T_Tornado_Sprite_07_24: 9115125445423122525
+      Fx_T_Tornado_Sprite_07_25: 5067989663452851159
+      Fx_T_Tornado_Sprite_07_26: 1605744422115022517
+      Fx_T_Tornado_Sprite_07_27: 498332802368370611
+      Fx_T_Tornado_Sprite_07_28: -251700863104462163
+      Fx_T_Tornado_Sprite_07_29: -3211266576326246336
+      Fx_T_Tornado_Sprite_07_3: 2949239804443369481
+      Fx_T_Tornado_Sprite_07_30: -4145833200661827424
+      Fx_T_Tornado_Sprite_07_31: -6716491652494612737
+      Fx_T_Tornado_Sprite_07_32: -4740214029518005203
+      Fx_T_Tornado_Sprite_07_33: 4308179877116518459
+      Fx_T_Tornado_Sprite_07_34: -1806997011148226130
+      Fx_T_Tornado_Sprite_07_35: -8680287122915561280
+      Fx_T_Tornado_Sprite_07_36: 8999942476875999181
+      Fx_T_Tornado_Sprite_07_37: -8341010426732148621
+      Fx_T_Tornado_Sprite_07_38: -5063328470456580326
+      Fx_T_Tornado_Sprite_07_39: 3839518340300772623
+      Fx_T_Tornado_Sprite_07_4: -5403599478542875800
+      Fx_T_Tornado_Sprite_07_40: -409728746503836521
+      Fx_T_Tornado_Sprite_07_41: -1742680188128303765
+      Fx_T_Tornado_Sprite_07_42: -1020028715101016396
+      Fx_T_Tornado_Sprite_07_43: 6267981984298268257
+      Fx_T_Tornado_Sprite_07_44: -2023613316455494180
+      Fx_T_Tornado_Sprite_07_45: -2360450260992842484
+      Fx_T_Tornado_Sprite_07_46: -6929853184090542685
+      Fx_T_Tornado_Sprite_07_47: 8040300798704349946
+      Fx_T_Tornado_Sprite_07_48: -7272767661547756953
+      Fx_T_Tornado_Sprite_07_5: -6037239609785952632
+      Fx_T_Tornado_Sprite_07_6: 8575504507537379764
+      Fx_T_Tornado_Sprite_07_7: -3970830990104143082
+      Fx_T_Tornado_Sprite_07_8: 691616446677824654
+      Fx_T_Tornado_Sprite_07_9: 574301840072137482
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
