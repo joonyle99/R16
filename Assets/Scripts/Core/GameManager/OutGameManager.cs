@@ -72,6 +72,8 @@ public class OutGameManager : MonoBehaviour
     
     private void Initialize()
     {
+        Time.timeScale = 1f;
+        
         _outGameStateController = new GameStateController<OutGameState>();
         _cameraController = FindFirstObjectByType<CameraController>();
         _outGameUIController = FindFirstObjectByType<OutGameUIController>();
@@ -82,7 +84,11 @@ public class OutGameManager : MonoBehaviour
         _player.Initialize(_cameraController, _pointerInput, null, null, null, null);
         // _player.OnLanded += CheckRoomBoundary;
         _irisMaskTransition.Initialize(_player.transform);
-        _gameStartButton.Initialize(() => _irisMaskTransition.TransitionOut(() => SceneManager.LoadScene("InGameScene")));
+        _gameStartButton.Initialize(() =>
+        {
+            _irisMaskTransition.TransitionOut(() => SceneManager.LoadScene("InGameScene"));
+            SoundManager.Instance.StopBgm();
+        });
         _relicBoxButton.Initialize(null);
 
         if (SoundManager.Instance != null) _outGameStateController.OnStateChanged += SoundManager.Instance.OnStateChanged;

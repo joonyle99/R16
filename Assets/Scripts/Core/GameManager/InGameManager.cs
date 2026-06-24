@@ -70,6 +70,8 @@ public class InGameManager : MonoBehaviour
 
     private void Initialize()
     {
+        Time.timeScale = 1f; // OutGame의 시작 버튼 슬로우(timeScale=0.08)가 씬 전환 후에도 유지되는 것을 방지
+
         _inGameStateController = new GameStateController<InGameState>();
         _cameraController = FindFirstObjectByType<CameraController>();
         _inGameUIController = FindFirstObjectByType<InGameUIController>();
