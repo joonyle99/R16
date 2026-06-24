@@ -33,7 +33,7 @@ public class GameStartButton : InteractableButton
         var target = visual != null ? visual : transform;
         var baseY = target.localPosition.y;
 
-        Time.timeScale = 0.08f;
+        Time.timeScale = 0.04f;
 
         PlayAnimation(PursuerAnimationState.Hit);
 
