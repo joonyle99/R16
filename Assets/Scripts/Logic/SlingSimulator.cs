@@ -96,7 +96,10 @@ public static class SlingSimulator
                 return SlingEvent.Wall;
             }
 
-            return SlingEvent.None;
+            // 못 튕기는 벽(minDistance 미달 등)은 예측을 벽에서 종료한다.
+            // 실제 비행은 물리로 벽에 막히는데, 여기서 무동작(None)으로 두면 예측선이 벽을 뚫고 나가 실제와 어긋난다.
+            state.Remaining = 0f;
+            return SlingEvent.NonWall;
         }
 
         state.Position += step;
