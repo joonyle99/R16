@@ -4319,8 +4319,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CameraShaker
   _decay: 15
   _frequency: 30
-  _testMagnitude: 1
-  _testDirection: {x: 1, y: 1}
+  _testMagnitude: 0
+  _testDirection: {x: 0, y: 0}
 --- !u!1001 &763544103
 PrefabInstance:
   m_ObjectHideFlags: 0
